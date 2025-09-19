@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Site Wonka</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js">
+
+</head>
+
+<body>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+
+    <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+      <use href="#sun-fill"></use>
+    </svg>
+    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+    </symbol>
+    <symbol id="cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+    </symbol>
+  </svg>
+
+  <nav style="background:#290133;" class="navbar navbar-expand-md sticky-top border-bottom" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-md-none" href="#">
+        <img width="60px" src="https://www.wonka.com/modules/custom/wonka_header/dist/img/header_logo_reg.png" alt="Wonka Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="#">
+                <img width="60px" src="https://www.wonka.com/modules/custom/wonka_header/dist/img/header_logo_reg.png" alt="Wonka Logo">
+              </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center d-flex align-items-center">
+      <div class="col-md-6 p-lg-5 mx-auto" style="max-width: 50%;">
+        <h1 class="display-3 fw-bold">Um mundo de PURA IMAGINAÇÃO!</h1>
+        <br>
+        <h5>Descubra as NOVAS gomas Wonka® Magic Hat!</h5>
+        <br>
+        <h5 class="description">Um universo de doces atemporais e experiências mágicas para delícias doces inesperadas! Prove a magia do mundo deliciosamente mágico de Willy Wonka. </h5>
+        <br> 
+        <div class="d-flex gap-3 justify-content-center lead fw-normal">
+          <a id="comprar" class="icon-link" href="#about">
+            Sobre nós
+            
+          </a>
+          <a id="comprar" class="icon-link" href="https://www.karamellstore.com.br/balas-wonka-magic-hat-gummies-mondelez-importado-turquia">
+            Comprar
+          
+          </a>
+        </div>
+
+      </div>
+      <div>
+        <img width="60%" src="	https://www.wonka.com/sites/default/files/2023-11/wonka%20packshot_0_0.png" class="embalage">
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+  </main>
+<div> 
+  <img src="https://www.wonka.com/sites/default/files/2023-09/Wonka_MagicIsServed_SJ_V2_16x9_0.png" width="100%"> 
+</div> 
+<section> <div id="ingredients-box">
+  <div id="list-1"> 
+    <h2> Fatos nutricionais </h2> 
+    <p> Tamanho da porção: 8 peças (30g)
+Calorias: 100 / Gorduras: 0g / Açúcares: 14g / Proteínas: 1g / Sódio: 20mg / Carboidratos totais: 23g </p>
+  </div>
+  <div id="list-2"> 
+    <h2> Ingredientes </h2> 
+    <p> Xarope de milho, açúcar, gelatina, água, contém 2% ou menos de ácido cítrico, ácido málico (ácido DL-Málico), pectina, suco de frutas e vegetais (cor), óleo de coco, sabores naturais e artificiais, citrato de sódio, cera de carnaúba , Vermelho 40, Amarelo 5, Azul 1. </p>
+</div>
+</div> </section>
+
+<div> 
+  <img src="https://www.wonka.com/sites/default/files/2023-09/Wonka_MagicalGummyPour_16x9_v4.png" width="100%"> 
+</div> 
+
+<section>
+  <div id= "box-about"> 
+    <h2 id="about" class="core-text"> Sobre nós </h2>
+    <span> Onde a imaginação encontra a doçura! </span> 
+    <p> Bem-vindo ao mundo excêntrico de Wonka® . Nossa fábrica de doces é um lugar de absoluta maravilha! Entre em um mundo de pura imaginação e possibilidades ilimitadas. Mime os seus sentidos, deixe a sua imaginação correr solta e experimente o encanto de Wonka.
+
+Na Wonka, acreditamos que muitas vezes podemos ficar presos na rigidez da idade adulta, mas se olharmos o mundo através da extravagância dos olhos de uma criança, começamos a ver um mundo cheio de maravilhas e que o doce não é apenas uma guloseima, mas uma experiência encantadora que leva você a uma viagem mágica com cada mordida deliciosa.
+
+Você está pronto para embarcar em uma jornada cheia de pura magia? Oferecemos um universo de doces atemporais e experiências mágicas para doces inesperados. Fique por dentro das últimas criações de confeitaria, ofertas exclusivas e surpresas encantadoras. Junte-se às nossas aventuras recheadas de doces inscrevendo-se para receber comunicações emocionantes de Wonka! Bem-vindo a bordo, sonhador de doces! </p>
+  </div> 
+ </section>
+  <footer class="container">
+    <section class="bg-light py-3 py-md-5 py-xl-8">
+      <div class="container">
+        <div class="row gy-3 gy-md-4 gy-lg-0">
+          <div class="col-12 col-lg-6">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-11">
+                <h2 id="contact" class="h1 mb-3 core-text">Fique ligado!</h2>
+                <p class="lead fs-4 text-secondary mb-5">Entre em contato conosco por meio das nossas redes sociais ou preenchendo o formulário abaixo :)</p>
+                <div class="shareSocial">
+                  <h3 class="socialTitle">Redes Sociais:</h3>
+                  <ul class="socialList">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa fa-twitter"></i></a></li>
+ <li><a href=""><i class="fa-brands fa fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="bg-white border rounded shadow-sm overflow-hidden">
+
+              <form action="#!">
+                <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                  <div class="col-12">
+                    <label for="fullname" class="form-label">Nome completo
+                      <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg>
+                      </span>
+                      <input type="email" class="form-control" id="email" name="email" value="" required>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                      </span>
+                      <input type="tel" class="form-control" id="phone" name="phone" value="">
+                    </div>
+                  </div>
+                  <div class="">
+                    <label for="subject" class="form-label">Assunto <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                  </div>
+                  <div class="">
+                    <label for="message" class="form-label">Mensagem
+                      <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                  </div>
+                  <div class="">
+                    <div class="d-grid">
+                      <button class="btn btn-primary btn-lg" type="submit">Enviar mensagem</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+</body>
+</html>
